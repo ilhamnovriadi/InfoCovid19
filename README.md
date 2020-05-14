@@ -7,5 +7,7 @@
 ###### Data update sebaran Covid-19 di 34 Provinsi di Indonesia dan kumulatif
 
 > Jalankan dengan "npm run-script start-dev"
-<br>
+.
+.
+.
 > Build Web "npm run build"
