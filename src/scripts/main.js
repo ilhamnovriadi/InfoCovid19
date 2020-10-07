@@ -1,9 +1,9 @@
 function main() {
   const dataNasional = async () => {
     await fetch("https://indonesia-covid-19.mathdro.id/api/harian")
-      .then(response => response.json())
-      .then(responseJson => renderInfo(responseJson))
-      .catch(error => alert(error))
+      .then((response) => response.json())
+      .then((responseJson) => renderInfo(responseJson))
+      .catch((error) => alert(error));
   };
 
   function formatNumber(x) {
@@ -12,7 +12,7 @@ function main() {
 
   const renderInfo = (info) => {
     const infoData = info.data;
-    const infoUpdate = infoData.pop();
+    const infoUpdate = infoData[299];
     const {
       jumlahPasienSembuh,
       jumlahKasusKumulatif,
@@ -54,7 +54,7 @@ function main() {
 
   const dataProvinsi = async () => {
     await fetch("https://indonesia-covid-19.mathdro.id/api/provinsi")
-      .then(response => response.json())
+      .then((response) => response.json())
       .then((responseJson) => {
         const response = responseJson.data;
         renderInfoProv(response);
